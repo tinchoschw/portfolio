@@ -124,6 +124,8 @@ footer .btn.primary{background:var(--amber);border-color:var(--amber);color:#122
   .top nav{display:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+.lang{font:600 .9rem var(--body);padding:7px 16px;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.lang:hover{background:var(--ink);color:var(--bg)}
 </style>
 </head>
 <body>
@@ -136,6 +138,7 @@ footer .btn.primary{background:var(--amber);border-color:var(--amber);color:#122
       <a href="#skills">Skills</a>
       <a href="#contacto">Contacto</a>
     </nav>
+    <button class="lang" id="lang" type="button">EN</button>
   </header>
 
   <main>
@@ -280,12 +283,12 @@ footer .btn.primary{background:var(--amber);border-color:var(--amber);color:#122
         <article class="tool">
           <h3>Plataforma de catálogo para emprendedores</h3>
           <p>Cada emprendedor arma su tienda online con soporte personalizado y sin límites de productos.</p>
-          <a class="link" href="https://tienditas.ai.studio/" target="_blank" rel="noopener">Ver demo</a>
+          <a class="link" href="#" target="_blank" rel="noopener">Ver demo</a>
         </article>
         <article class="tool">
           <h3>Calendario para emprendedores</h3>
           <p>Un calendario para organizar publicaciones, fechas clave y tareas del negocio en un solo lugar.</p>
-          <a class="link" href="https://agendado.ai.studio/" target="_blank" rel="noopener">Ver demo</a>
+          <a class="link" href="#" target="_blank" rel="noopener">Ver demo</a>
         </article>
         <article class="tool">
           <h3>Tu próxima herramienta</h3>
@@ -333,5 +336,105 @@ footer .btn.primary{background:var(--amber);border-color:var(--amber);color:#122
     </div>
   </div>
 </footer>
+<script>
+(function(){
+var EN={
+"Trayectoria":"Career","Herramientas":"Tools","Contacto":"Contact","Secciones":"Sections",
+"Llevo productos de pagos y automatización de la idea a producción.":"I take payments and automation products from idea to production.",
+"Product Manager, líder de proyectos y Scrum Master con más de 15 años en IT, casi todos en fintech. Hoy ayudo a PyMEs a vender más ordenado con herramientas hechas con IA.":"Product Manager, project lead and Scrum Master with 15+ years in IT, most of them in fintech. Today I help small businesses sell in a more organized way with AI-built tools.",
+"Descargar CV":"Download CV",
+"Foto de Martín Schwartzman":"Photo of Martín Schwartzman",
+"3 hs":"3 hrs",
+"años en IT, 9 de ellos en una financiera":"years in IT, 9 of them at a financial company",
+"errores de carga con flujos en n8n":"fewer data-entry errors with n8n flows",
+"ahorradas por cada pedido recibido":"saved on every order received",
+"productos sincronizados con Meta":"products synced with Meta",
+"Rieles de pago que integré:":"Payment rails I integrated:",
+"Efectivo en México":"Cash in Mexico","Tarjetas de crédito (Yuno)":"Credit cards (Yuno)","Transferencias (Shinkansen)":"Transfers (Shinkansen)","QR interoperable (BCRA)":"Interoperable QR (BCRA)",
+"De desarrollo y soporte a liderar equipos y productos. Tocá cada rol para ver el detalle.":"From development and support to leading teams and products. Tap each role for details.",
+"Freelance en Integraciones":"Freelance in Integrations",
+"Consultoría independiente · Feb 2025 a hoy · Remoto":"Independent consulting · Feb 2025 to present · Remote",
+"Automatizaciones con n8n y Google Sheets que bajaron 90% los errores de carga.":"n8n and Google Sheets automations that cut data-entry errors by 90%.",
+"Traduzco necesidades de PyMEs en herramientas a medida: catálogos, tablas de talles y transmisión de visuales.":"I turn small-business needs into custom tools: catalogs, size charts and visual broadcasting.",
+"Mantengo sincronizados más de 200 productos entre Google Sheets y Meta.":"I keep 200+ products in sync between Google Sheets and Meta.",
+"Coordino a 5 proveedores de 3 clientes y analizo incidentes con bases de datos y Postman.":"I coordinate 5 vendors across 3 clients and analyze incidents with databases and Postman.",
+"Technical Product Manager en Tapi":"Technical Product Manager at Tapi",
+"Feb 2022 a Ene 2025 · Remoto":"Feb 2022 to Jan 2025 · Remote",
+"Lideré la vertical de pagos recurrentes en efectivo en México.":"I led the recurring cash payments vertical in Mexico.",
+"La vertical se expandió a tarjetas de crédito (Yuno) y transferencias (Shinkansen).":"The vertical expanded to credit cards (Yuno) and transfers (Shinkansen).",
+"Coordiné integraciones con clientes de educación, fintech y fitness, desde la definición funcional hasta la implementación.":"I coordinated integrations with education, fintech and fitness clients, from functional definition to implementation.",
+"Prioricé el backlog técnico y lideré las ceremonias ágiles.":"I prioritized the technical backlog and ran the agile ceremonies.",
+"Gestioné la interoperabilidad en Argentina (QRI) con fintechs y billers.":"I managed interoperability in Argentina (QRI) with fintechs and billers.",
+"Líder de Integraciones en Billetera Yacaré":"Integrations Lead at Billetera Yacaré",
+"Nov 2021 a Feb 2022 · Remoto":"Nov 2021 to Feb 2022 · Remote",
+"Pagos con QR interoperable bajo normativa BCRA.":"Interoperable QR payments under BCRA regulation.",
+"Coordiné proyectos de emisión y recepción de pagos.":"I coordinated payment issuing and acceptance projects.",
+"Hice homologaciones técnicas con billeteras y aceptadores, cuidando calidad y seguridad.":"I ran technical certifications with wallets and acquirers, ensuring quality and security.",
+"Líder Técnico":"Tech Lead",
+"Consultoría independiente · Feb 2021 a Sep 2021 · Remoto":"Independent consulting · Feb 2021 to Sep 2021 · Remote",
+"Bot de WhatsApp para pedidos gastronómicos, más un proyecto aeroespacial.":"WhatsApp ordering bot for restaurants, plus an aerospace project.",
+"Lideré el desarrollo técnico de un proyecto aeroespacial a través de una software factory.":"I led the technical development of an aerospace project through a software factory.",
+"Armé el bot de pedidos con arquitectura moderna y APIs REST.":"I built the ordering bot with modern architecture and REST APIs.",
+"Líder Técnico Funcional y Jefe de Soporte en Cordial":"Functional Tech Lead and Head of Support at Cordial",
+"Compañía Financiera · Sep 2012 a Feb 2021 · Presencial":"Financial company · Sep 2012 to Feb 2021 · On-site",
+"Casi 9 años liderando squads y soporte en una financiera.":"Almost 9 years leading squads and support at a financial company.",
+"Lideré squads de productos pasivos e integré sistemas contables con un nuevo core bancario.":"I led liability-product squads and integrated accounting systems with a new core banking platform.",
+"Coordiné soporte técnico, proveedores y métricas de calidad bajo SOX.":"I coordinated technical support, vendors and quality metrics under SOX.",
+"Gestioné la implementación de NIIF y fusiones de sistemas tras adquisiciones.":"I managed the IFRS implementation and system mergers after acquisitions.",
+"Desarrollé resúmenes de cuenta y rehíce el sitio web de Tarjeta Automática SA.":"I built account statements and rebuilt the Tarjeta Automática SA website.",
+"Herramientas que armé yo":"Tools I built",
+"Proyectos propios hechos con IA para resolver problemas reales de emprendedores.":"Personal projects built with AI to solve real problems for entrepreneurs.",
+"Catálogo online que se actualiza solo desde mi CSV y queda publicado también en WhatsApp Web a través de Meta. Cargo una vez, se ve en todos lados.":"Online catalog that updates itself from my CSV and is also published on WhatsApp Web through Meta. I upload once, it shows up everywhere.",
+"Ver el catálogo":"View the catalog",
+"Flujo: CSV, automatización, catálogo web, Meta, WhatsApp":"Flow: CSV, automation, web catalog, Meta, WhatsApp",
+"Automatización":"Automation","Catálogo web":"Web catalog",
+"Plataforma de catálogo para emprendedores":"Catalog platform for entrepreneurs",
+"Cada emprendedor arma su tienda online con soporte personalizado y sin límites de productos.":"Each entrepreneur builds their online store with personalized support and no product limits.",
+"Ver demo":"View demo",
+"Calendario para emprendedores":"Calendar for entrepreneurs",
+"Un calendario para organizar publicaciones, fechas clave y tareas del negocio en un solo lugar.":"A calendar to organize posts, key dates and business tasks in one place.",
+"Tu próxima herramienta":"Your next tool",
+"Si tu equipo pierde horas en tareas repetitivas, lo conversamos y lo automatizamos.":"If your team loses hours on repetitive tasks, let’s talk and automate it.",
+"Escribime":"Write me",
+"Con qué trabajo":"What I work with",
+"Del negocio a la base de datos, pasando por la API.":"From the business to the database, through the API.",
+"Producto y gestión":"Product and management","Datos":"Data","Cloud y monitoreo":"Cloud and monitoring","Desarrollo e integración":"Development and integration","IA y automatización":"AI and automation","Idiomas":"Languages",
+"Español nativo":"Native Spanish","Inglés intermedio":"Intermediate English",
+"Formación y certificaciones":"Education and certifications",
+"Analista de Sistemas, Instituto ORT Argentina":"Systems Analyst, Instituto ORT Argentina",
+"DevOps, Integración y Agilidad Continua, UTN (2018)":"DevOps, Continuous Integration and Agility, UTN (2018)",
+"¿Hablamos?":"Let’s talk",
+"Buenos Aires, Argentina. Disponible para trabajo remoto.":"Buenos Aires, Argentina. Available for remote work.",
+"Enviar un mail":"Send an email","CV en PDF":"CV (PDF)"
+};
+var DESC={es:document.querySelector('meta[name=description]').content,en:"Product Manager with 15+ years in IT and fintech. Payments, integrations and AI-powered automation."};
+var CV={es:"Martin_Schwartzman_-_CV.pdf",en:"Martin_Schwartzman_-_CV_EN.pdf"};
+var nodes=[],attrs=[],btn=document.getElementById('lang');
+var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n;
+while(n=w.nextNode()){
+  if(n.parentNode.tagName==='SCRIPT')continue;
+  var k=n.nodeValue.replace(/\s+/g,' ').trim();
+  if(EN[k])nodes.push({n:n,o:n.nodeValue,k:k});
+}
+document.querySelectorAll('[aria-label],[alt]').forEach(function(e){
+  ['aria-label','alt'].forEach(function(a){var v=e.getAttribute(a);if(v&&EN[v])attrs.push({e:e,a:a,o:v});});
+});
+function set(l){
+  var en=l==='en';
+  nodes.forEach(function(x){x.n.nodeValue=en?x.o.replace(x.k,EN[x.k]):x.o;});
+  attrs.forEach(function(x){x.e.setAttribute(x.a,en?EN[x.o]:x.o);});
+  document.querySelectorAll('a[download]').forEach(function(a){a.setAttribute('href',CV[l]);});
+  document.querySelector('meta[name=description]').content=DESC[l];
+  document.documentElement.lang=l;
+  btn.textContent=en?'ES':'EN';
+  btn.setAttribute('aria-label',en?'Cambiar a español':'Switch to English');
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+var saved=null;try{saved=localStorage.getItem('lang');}catch(e){}
+var cur=saved||((navigator.language||'es').slice(0,2)==='es'?'es':'en');
+btn.addEventListener('click',function(){cur=cur==='es'?'en':'es';set(cur);});
+set(cur);
+})();
+</script>
 </body>
 </html>
