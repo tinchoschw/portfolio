@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Martín Schwartzman | Product Manager</title>
+<meta name="description" content="Product Manager con más de 15 años en IT y fintech. Pagos, integraciones y automatización con IA.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💳</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5F3; --surface:#FFFFFF; --ink:#12241F; --muted:#51635D; --line:#D5DDD8;
+  --accent:#2437D9; --accent-ink:#FFFFFF; --mint:#CBEBDA; --amber:#FFC24D;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1A17; --surface:#16251F; --ink:#EAF1ED; --muted:#9DB0A8; --line:#2A3C35;
+    --accent:#8C98FF; --accent-ink:#0F1A17; --mint:#1F3A2E;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* Header */
+.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px;flex-wrap:wrap}
+.brand{font:800 1.1rem var(--display);text-decoration:none}
+.top nav{display:flex;gap:20px;font-weight:500;font-size:.95rem}
+.top nav a{text-decoration:none;color:var(--muted)}
+.top nav a:hover{color:var(--ink)}
+
+/* Hero */
+.hero{padding:48px 0 40px;display:grid;grid-template-columns:1fr 220px;gap:40px;align-items:center}
+.hero h1{font:800 clamp(2.2rem,5.6vw,4rem)/1.04 var(--display);letter-spacing:-.02em;margin:0 0 20px;max-width:16ch}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:56ch;margin:0 0 28px}
+.photo{width:220px;height:220px;border-radius:50%;object-fit:cover;border:6px solid var(--surface);box-shadow:0 0 0 2px var(--line)}
+.photo-fallback{display:none}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid var(--ink);border-radius:20px;background:var(--surface);overflow:hidden}
+.stat{padding:22px 20px;border-right:2px solid var(--ink)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font:800 2.4rem/1 var(--display);letter-spacing:-.02em;margin-bottom:6px}
+.stat span{color:var(--muted);font-size:.95rem;line-height:1.35;display:block}
+
+/* Rails */
+.rails{margin:28px 0 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.rails strong{font-weight:600;margin-right:6px}
+.chip{display:inline-block;padding:6px 14px;border-radius:999px;background:var(--mint);font-size:.9rem;font-weight:500}
+
+/* Sections */
+section{padding:64px 0 0}
+h2{font:800 clamp(1.7rem,3.4vw,2.4rem)/1.1 var(--display);letter-spacing:-.015em;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 28px;max-width:60ch}
+
+/* Timeline */
+.tl{list-style:none;margin:0;padding:0 0 0 28px;border-left:3px solid var(--ink)}
+.tl li{position:relative;margin-bottom:14px}
+.tl li::before{content:"";position:absolute;left:-38px;top:24px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--ink)}
+.tl li.now::before{background:var(--amber)}
+details{background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:0}
+details[open]{border-color:var(--ink)}
+summary{cursor:pointer;list-style:none;padding:18px 22px;display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";grid-row:1;grid-column:2;font:800 1.5rem var(--display);color:var(--accent)}
+details[open] summary::after{content:"–"}
+.role{font:800 1.2rem/1.2 var(--display)}
+.when{grid-column:1/-1;color:var(--muted);font-size:.9rem}
+.win{grid-column:1/-1;margin-top:4px;font-weight:500}
+.more{padding:0 22px 20px}
+.more ul{margin:0 0 14px;padding-left:20px}
+.more li{margin-bottom:4px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:.82rem;font-weight:500;padding:3px 10px;border-radius:8px;border:1.5px solid var(--line);color:var(--muted)}
+
+/* Tools */
+.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tool{background:var(--surface);border:2px solid var(--ink);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.tool.big{grid-column:1/-1;background:var(--mint);flex-direction:row;gap:32px;align-items:center;flex-wrap:wrap}
+.tool.big .txt{flex:1 1 300px}
+.tool h3{font:800 1.35rem/1.15 var(--display);margin:0}
+.tool p{margin:0;color:var(--muted)}
+.tool.big p{color:var(--ink)}
+.tool a.link{margin-top:auto;font-weight:600;color:var(--accent)}
+.tool.big a.link{color:var(--ink)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;flex:1 1 320px}
+.node{background:var(--surface);border:2px solid var(--ink);border-radius:12px;padding:8px 14px;font-weight:600;font-size:.92rem}
+.arrow{font-weight:800;color:var(--ink)}
+
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px 32px}
+.skills h3{font:800 1rem var(--display);margin:0 0 10px}
+.skills .tags span{color:var(--ink);background:var(--surface)}
+.certs{margin-top:32px;padding:20px 24px;border-radius:16px;background:var(--surface);border:2px solid var(--line)}
+.certs h3{font:800 1rem var(--display);margin:0 0 8px}
+.certs ul{margin:0;padding-left:20px;color:var(--muted)}
+
+/* Footer */
+footer{margin-top:72px;background:var(--ink);color:var(--bg)}
+footer .wrap{padding:56px 24px;display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:end}
+footer h2{margin:0 0 10px;color:var(--bg)}
+footer p{margin:0;opacity:.75}
+footer .btn{border-color:var(--bg);color:var(--bg)}
+footer .btn.primary{background:var(--amber);border-color:var(--amber);color:#12241F}
+
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr}
+  .photo{width:130px;height:130px;order:-1}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:2px solid var(--ink)}
+  .tools{grid-template-columns:1fr}
+  .top nav{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#">Martín Schwartzman</a>
+    <nav aria-label="Secciones">
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#skills">Skills</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Llevo productos de pagos y automatización de la idea a producción.</h1>
+        <p class="lead">Product Manager, líder de proyectos y Scrum Master con más de 15 años en IT, casi todos en fintech. Hoy ayudo a PyMEs a vender más ordenado con herramientas hechas con IA.</p>
+        <div class="cta">
+          <a class="btn primary" href="Martin_Schwartzman_-_CV.pdf" download>Descargar CV</a>
+          <a class="btn" href="https://www.linkedin.com/in/martin-d-schwartzman" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="#contacto">Contacto</a>
+        </div>
+      </div>
+      <img class="photo" src="foto.jpg" alt="Foto de Martín Schwartzman" onerror="this.style.display='none'">
+    </div>
+
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><b>15+</b><span>años en IT, 9 de ellos en una financiera</span></div>
+      <div class="stat" role="listitem"><b>−90%</b><span>errores de carga con flujos en n8n</span></div>
+      <div class="stat" role="listitem"><b>3 hs</b><span>ahorradas por cada pedido recibido</span></div>
+      <div class="stat" role="listitem"><b>200+</b><span>productos sincronizados con Meta</span></div>
+    </div>
+
+    <div class="rails">
+      <strong>Rieles de pago que integré:</strong>
+      <span class="chip">Efectivo en México</span>
+      <span class="chip">Tarjetas de crédito (Yuno)</span>
+      <span class="chip">Transferencias (Shinkansen)</span>
+      <span class="chip">QR interoperable (BCRA)</span>
+    </div>
+
+    <section id="trayectoria">
+      <h2>Trayectoria</h2>
+      <p class="sub">De desarrollo y soporte a liderar equipos y productos. Tocá cada rol para ver el detalle.</p>
+      <ol class="tl">
+        <li class="now">
+          <details open>
+            <summary>
+              <span class="role">Freelance en Integraciones</span>
+              <span class="when">Consultoría independiente · Feb 2025 a hoy · Remoto</span>
+              <span class="win">Automatizaciones con n8n y Google Sheets que bajaron 90% los errores de carga.</span>
+            </summary>
+            <div class="more">
+              <ul>
+                <li>Traduzco necesidades de PyMEs en herramientas a medida: catálogos, tablas de talles y transmisión de visuales.</li>
+                <li>Mantengo sincronizados más de 200 productos entre Google Sheets y Meta.</li>
+                <li>Coordino a 5 proveedores de 3 clientes y analizo incidentes con bases de datos y Postman.</li>
+              </ul>
+              <div class="tags"><span>n8n</span><span>SQL</span><span>GitHub</span><span>Claude</span><span>Gemini</span><span>AI Studio</span><span>Tiendanube</span></div>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>
+              <span class="role">Technical Product Manager en Tapi</span>
+              <span class="when">Feb 2022 a Ene 2025 · Remoto</span>
+              <span class="win">Lideré la vertical de pagos recurrentes en efectivo en México.</span>
+            </summary>
+            <div class="more">
+              <ul>
+                <li>La vertical se expandió a tarjetas de crédito (Yuno) y transferencias (Shinkansen).</li>
+                <li>Coordiné integraciones con clientes de educación, fintech y fitness, desde la definición funcional hasta la implementación.</li>
+                <li>Prioricé el backlog técnico y lideré las ceremonias ágiles.</li>
+                <li>Gestioné la interoperabilidad en Argentina (QRI) con fintechs y billers.</li>
+              </ul>
+              <div class="tags"><span>Jira</span><span>Postman</span><span>PostgreSQL</span><span>Tableau</span><span>AWS</span><span>Retool</span></div>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>
+              <span class="role">Líder de Integraciones en Billetera Yacaré</span>
+              <span class="when">Nov 2021 a Feb 2022 · Remoto</span>
+              <span class="win">Pagos con QR interoperable bajo normativa BCRA.</span>
+            </summary>
+            <div class="more">
+              <ul>
+                <li>Coordiné proyectos de emisión y recepción de pagos.</li>
+                <li>Hice homologaciones técnicas con billeteras y aceptadores, cuidando calidad y seguridad.</li>
+              </ul>
+              <div class="tags"><span>Jira</span><span>Trello</span><span>MySQL</span><span>PostgreSQL</span><span>Postman</span></div>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>
+              <span class="role">Líder Técnico</span>
+              <span class="when">Consultoría independiente · Feb 2021 a Sep 2021 · Remoto</span>
+              <span class="win">Bot de WhatsApp para pedidos gastronómicos, más un proyecto aeroespacial.</span>
+            </summary>
+            <div class="more">
+              <ul>
+                <li>Lideré el desarrollo técnico de un proyecto aeroespacial a través de una software factory.</li>
+                <li>Armé el bot de pedidos con arquitectura moderna y APIs REST.</li>
+              </ul>
+              <div class="tags"><span>.NET Core</span><span>C#</span><span>Angular</span><span>PostgreSQL</span><span>Azure DevOps</span><span>Twilio</span></div>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>
+              <span class="role">Líder Técnico Funcional y Jefe de Soporte en Cordial</span>
+              <span class="when">Compañía Financiera · Sep 2012 a Feb 2021 · Presencial</span>
+              <span class="win">Casi 9 años liderando squads y soporte en una financiera.</span>
+            </summary>
+            <div class="more">
+              <ul>
+                <li>Lideré squads de productos pasivos e integré sistemas contables con un nuevo core bancario.</li>
+                <li>Coordiné soporte técnico, proveedores y métricas de calidad bajo SOX.</li>
+                <li>Gestioné la implementación de NIIF y fusiones de sistemas tras adquisiciones.</li>
+                <li>Desarrollé resúmenes de cuenta y rehíce el sitio web de Tarjeta Automática SA.</li>
+              </ul>
+              <div class="tags"><span>Oracle</span><span>SQL Server</span><span>APIs REST</span><span>Jira</span><span>Integration Services</span></div>
+            </div>
+          </details>
+        </li>
+      </ol>
+    </section>
+
+    <section id="herramientas">
+      <h2>Herramientas que armé yo</h2>
+      <p class="sub">Proyectos propios hechos con IA para resolver problemas reales de emprendedores.</p>
+      <div class="tools">
+        <article class="tool big">
+          <div class="txt">
+            <h3>Apolo Store</h3>
+            <p>Catálogo online que se actualiza solo desde mi CSV y queda publicado también en WhatsApp Web a través de Meta. Cargo una vez, se ve en todos lados.</p>
+            <p style="margin-top:12px"><a class="link" href="https://tinchoschw.github.io/ApoloStore" target="_blank" rel="noopener">Ver el catálogo</a></p>
+          </div>
+          <div class="flow" aria-label="Flujo: CSV, automatización, catálogo web, Meta, WhatsApp">
+            <span class="node">CSV</span><span class="arrow">→</span>
+            <span class="node">Automatización</span><span class="arrow">→</span>
+            <span class="node">Catálogo web</span><span class="arrow">→</span>
+            <span class="node">Meta</span><span class="arrow">→</span>
+            <span class="node">WhatsApp</span>
+          </div>
+        </article>
+        <article class="tool">
+          <h3>Plataforma de catálogo para emprendedores</h3>
+          <p>Cada emprendedor arma su tienda online con soporte personalizado y sin límites de productos.</p>
+          <a class="link" href="https://tienditas.ai.studio/" target="_blank" rel="noopener">Ver demo</a>
+        </article>
+        <article class="tool">
+          <h3>Calendario para emprendedores</h3>
+          <p>Un calendario para organizar publicaciones, fechas clave y tareas del negocio en un solo lugar.</p>
+          <a class="link" href="https://agendado.ai.studio/" target="_blank" rel="noopener">Ver demo</a>
+        </article>
+        <article class="tool">
+          <h3>Tu próxima herramienta</h3>
+          <p>Si tu equipo pierde horas en tareas repetitivas, lo conversamos y lo automatizamos.</p>
+          <a class="link" href="#contacto">Escribime</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Con qué trabajo</h2>
+      <p class="sub">Del negocio a la base de datos, pasando por la API.</p>
+      <div class="skills">
+        <div><h3>Producto y gestión</h3><div class="tags"><span>Scrum</span><span>Agile</span><span>DevOps</span><span>ITIL</span><span>Jira</span><span>Trello</span><span>Tableau</span></div></div>
+        <div><h3>Datos</h3><div class="tags"><span>PostgreSQL</span><span>MySQL</span><span>Oracle</span><span>SQL Server</span></div></div>
+        <div><h3>Cloud y monitoreo</h3><div class="tags"><span>AWS CloudWatch</span><span>DynamoDB</span><span>Grafana</span><span>Redshift</span></div></div>
+        <div><h3>Desarrollo e integración</h3><div class="tags"><span>.NET</span><span>C#</span><span>Angular</span><span>APIs REST</span><span>Postman</span><span>Retool</span></div></div>
+        <div><h3>IA y automatización</h3><div class="tags"><span>n8n</span><span>Claude</span><span>Gemini</span><span>ChatGPT</span><span>Copilot</span><span>Stitch</span><span>AI Studio</span></div></div>
+        <div><h3>Idiomas</h3><div class="tags"><span>Español nativo</span><span>Inglés intermedio</span></div></div>
+      </div>
+      <div class="certs">
+        <h3>Formación y certificaciones</h3>
+        <ul>
+          <li>Analista de Sistemas, Instituto ORT Argentina</li>
+          <li>Scrum Foundations Professional Certification, CertiProf (2020)</li>
+          <li>DevOps, Integración y Agilidad Continua, UTN (2018)</li>
+          <li>ITIL Foundation, PeopleCert (2017)</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div>
+      <h2>¿Hablamos?</h2>
+      <p>Buenos Aires, Argentina. Disponible para trabajo remoto.</p>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="mailto:ugmartin@hotmail.com">Enviar un mail</a>
+      <a class="btn" href="https://wa.me/5491130025002" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn" href="https://www.linkedin.com/in/martin-d-schwartzman" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="Martin_Schwartzman_-_CV.pdf" download>CV en PDF</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
