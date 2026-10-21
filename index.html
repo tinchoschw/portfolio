@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F2F5F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1A17" media="(prefers-color-scheme: dark)">
 <title>Martín Schwartzman | Product Manager</title>
 <meta name="description" content="Product Manager con más de 15 años en IT y fintech. Pagos, integraciones y automatización con IA.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💳</text></svg>">
@@ -13,12 +16,13 @@
 :root{
   --bg:#F2F5F3; --surface:#FFFFFF; --ink:#12241F; --muted:#51635D; --line:#D5DDD8;
   --accent:#2437D9; --accent-ink:#FFFFFF; --mint:#CBEBDA; --amber:#FFC24D;
+  color-scheme:light dark;
   --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
   --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#0F1A17; --surface:#16251F; --ink:#EAF1ED; --muted:#9DB0A8; --line:#2A3C35;
+    --bg:#0F1A17; --surface:#16251F; --ink:#EAF1ED; --muted:#B6C7C0; --line:#34483F;
     --accent:#8C98FF; --accent-ink:#0F1A17; --mint:#1F3A2E;
   }
 }
